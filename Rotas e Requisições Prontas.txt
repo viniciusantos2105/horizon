@@ -1,0 +1,47 @@
+Requisições 
+
+Pessoa Controller
+Método POST - Criar Pessoa
+http://localhost:8080/api/pessoa/create
+{
+    "nome": "Testando2",
+    "telefone": "(71) 97700-1001",
+    "cpf": "397.778.680-75"
+}
+
+Conta Controller
+Método POST - Criar Conta
+http://localhost:8080/api/conta/create
+{
+    "cpf": "397.778.680-65",
+    "tipoConta": "P"
+}
+
+Método GET - Consultar Saldo
+http://localhost:8080/api/conta/balance
+{
+    "numero": 5924140184750747
+}
+
+Método Patch - Depositar Saldo
+http://localhost:8080/api/conta/deposit
+{
+    "numero": 5924140184750747,
+    "saldo": 30.00
+}
+
+Método Patch - Sacar Saldo
+http://localhost:8080/api/conta/withdraw
+{
+    "numero": 5924140184750747,
+    "saldo": 10.00
+}
+
+Transferencia Controller
+Método POST - Realizar Transferencia
+http://localhost:8080/api/transferencia/perform
+{
+    "numeroOrigem": 8840632164969282,
+    "numeroDestino": 5924140184750747,
+    "valor": 40.0
+}
